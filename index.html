@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <header class="logo-container">
+        <img src="./logo_vintage.png" alt="Logo Carros Vintage" class="logo" />
+    </header>
+
+    <nav class="logo">
+        <!--<h1> Inicio | Carros Antigos | motos | Contato </h1>  -->
+        <a href wm-link="home.html" wm-destino=".pagina">Home</a> |
+        <a href wm-link="carros_antigos.html" wm-destino=".pagina">carros Antigos</a> |
+        <a href wm-link="motos.html" wm-destino=".pagina">Motos</a> |
+        <a href wm-link="Contato.html" wm-destino=".pagina">Contato</a> |
+    </nav>
+
+    <div class="pagina">
+
+    </div>
+
+    <script>
+         function navegarViaAjax(url, seletor, push = true){
+            if(!url || !seletor) return
+                const elemento = document.querySelector(seletor)
+                fetch(url)
+                .then(resp => resp.text())
+                .then(html => {
+                    elemento.innerHTML = html
+                    if(push){
+                        history.push({ seletor },  "Página Ajax", url)
+                    }
+                })
+        }
+
+        document.querySelectorAll('[wm-link]').forEach(link => {
+            const url = link.attributes['wm-link'].value
+            const seletorDestino = link.attributes['wm-destino'].value
+            link.onclick = e =>{
+                e.preventDefault()
+                navegarViaAjax(url, seletorDestino)
+            }
+        })
+
+        window.onpopstate = e  => {
+            if(e.state){
+               navegarViaAjax (window.location.href, e.state.seletor, false)
+            }
+        }
+        window.onload = () => {
+            navegarViaAjax('home.html', '.pagina', false);
+        };
+
+    </script>
+</body>
+</html>

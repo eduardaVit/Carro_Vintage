@@ -1,0 +1,231 @@
+ body {
+    font-family: Arial, sans-serif;
+    background-color:#dccaaf;
+    margin: 0;
+
+}
+
+.carro {
+    margin-bottom: 30px;
+    padding: 25px;
+    background-color: #d3c2a4;
+    border-radius: 12px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    flex: 1 1 350px;
+    max-width: 400px;
+}
+
+.carros-container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    background-color: #dccaaf;
+    padding: 30px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.carro h2 {
+    font-size: 26px;
+    margin-bottom: 15px;
+}
+
+.carro p {
+    font-size: 18px;
+    color: #555;
+}
+
+.carro img {
+    width: 100%;
+    max-width: 380px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/*.logo {
+    display: flex;
+    height: 100%;
+    padding: 20px;
+    background-color: #dccaaf;
+    border-radius: 10px;
+    justify-content: flex-end; /* Alinha à direita */
+/*}*/
+
+.logo-container {
+width: 100%;
+    background-color: #dccaaf;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+.logo {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+
+
+.logo a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #555;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.logo a:hover {
+    background-color: #ff4d4d; /* Vermelho */
+    color: #fff;
+}
+
+.carros-container2 { 
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #dccaaf;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    display: flex;
+    gap: 25px; /* um pouco mais de espaço */
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.carro2 {
+    padding: 20px; /* mais espaço interno */
+    background-color: #d3c2a4;
+    border-radius: 8px;
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.15); /* sombra um pouco mais forte */
+    flex: 1 1 350px; /* largura base maior */
+    max-width: 420px; /* maior max-width */
+    min-width: 300px; /* maior min-width */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.carro2 img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px; /* mais espaço abaixo da imagem */
+}
+
+.carro2:hover {
+    transform: scale(1.07); /* efeito hover um pouco maior */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.motos {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #dccaaf;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.moto {
+    padding: 25px;
+    background-color: #d3c2a4;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.moto img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.moto h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.moto p {
+    font-size: 18px;
+    color: #333;
+}
+
+.moto:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 14px rgba(0, 0, 0, 0.2);
+}
+
+.contato-container {
+    max-width: 500px;
+    margin: 50px auto;
+    background-color: #dccaaf;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+        h1 {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #5a4e31;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #5a4e31;
+        }
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 2px solid #b3a07a;
+            border-radius: 8px;
+            font-size: 16px;
+            resize: vertical;
+        }
+        button {
+            background-color: #b3a07a;
+            color: white;
+            padding: 15px 25px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+            width: 100%;
+        }
+
+        .nav-links a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #555;
+    padding: 10px 15px;
+    border-radius: 8px;
+    background-color: transparent;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: #ff4d4d;
+    color: #fff;
+}
+      
+
+
+
